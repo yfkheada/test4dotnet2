@@ -1,5 +1,8 @@
 {
     "version": "1.0.0-*",
+"compilationOptions": {
+        "emitEntryPoint": true
+    },	
     "webroot": "wwwroot",
     "exclude": [
         "wwwroot"
@@ -18,7 +21,7 @@
         "Microsoft.Extensions.Logging.Console": "1.0.0-*"
     },
     "commands": {
-        "web": "Microsoft.AspNet.Server.Kestrel --server.urls http://localhost:5004"
+        "web": "Microsoft.AspNet.Server.Kestrel"
     },
     "frameworks": {
         "dnx451": { },
