@@ -20,7 +20,7 @@
         "Microsoft.AspNet.Hosting": "1.0.0-rc1-final",
         "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-final",
         "Microsoft.Extensions.Logging.Console": "1.0.0-rc1-final",
-		"Microsoft.Extensions.DependencyModel": "1.0.0-*"
+		"Microsoft.Extensions.DependencyModel": "1.0.0-rc1-final"
     },
     "commands": {
         "web": "Microsoft.AspNet.Server.Kestrel --server.urls http://*:5004"
