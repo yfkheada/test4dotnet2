@@ -45,6 +45,10 @@ namespace WebApplication2
             // Add framework services.
             services.AddApplicationInsightsTelemetry(Configuration);
 
+            services.AddEntityFramework()
+                .AddSqlServer()
+                .AddDbContext<ApplicationDbContext>(options =>
+                    options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
