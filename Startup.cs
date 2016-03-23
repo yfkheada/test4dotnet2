@@ -1,17 +1,16 @@
 using Microsoft.AspNet.Builder;
-using Microsoft.AspNet.Hosting;
-using Microsoft.AspNet.Http;
+using Microsoft.Extensions.Logging;
 
 namespace HelloWeb
 {
     public class Startup
     {
-        public void Configure(IApplicationBuilder app)
+        public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
         {
-            app.Run(context =>
-            {
-                return context.Response.WriteAsync("Hello World!");
-            });
+            loggerFactory.AddConsole();
+            app.UseIISPlatformHandler();
+            app.UseStaticFiles();
+            app.UseWelcomePage();
         }
     }
 }
